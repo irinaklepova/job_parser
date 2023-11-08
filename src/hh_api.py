@@ -39,16 +39,3 @@ class HeadHunterAPI(AbsAPI):
                    'experience': item['experience']['name'], 'url': item['alternate_url']}
             vacancies_hh.append(Vacancy(vac))
         return vacancies_hh
-
-    # def get_areas(self):
-    #     req = requests.get(HeadHunterAPI.area_url_api)
-    #     dict_areas = req.json()
-    #     return dict_areas
-
-# hh = HeadHunterAPI("инженер")
-# li = hh.get_vacancies()
-# print(hh.formate_vacancies(li))
-# for i in hh.formate_vacancies(li):
-#     print(i)
-# # for i in hh.get_areas():
-# #     print(i)
