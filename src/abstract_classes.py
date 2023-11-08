@@ -11,11 +11,6 @@ class AbsAPI(ABC):
         """Метод получения списка вакансий"""
         pass
 
-    # @abstractmethod
-    # def get_areas(self) -> list[dict]:
-    #     """Метод получения общего списка населенных пунктов"""
-    #     pass
-
     @abstractmethod
     def formate_vacancies(self, all_vacancies) -> dict:
         """Метод приведения полученных данных к общему формату"""
