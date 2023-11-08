@@ -44,7 +44,7 @@ class Vacancy:
 
     @staticmethod
     def vacancy_to_json(vac: list) -> dict:
-        """Метод преобразует список найденных вакансий к формату json"""
+        """Метод преобразует список найденных вакансий в словарь"""
         dic_vacancies = {}
         for i, item in enumerate(vac):
             st = 'Вакансия ' + str(i + 1)
@@ -56,6 +56,3 @@ class Vacancy:
               "url": item.url
             }
         return dic_vacancies
-
-
-
