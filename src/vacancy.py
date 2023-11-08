@@ -1,10 +1,6 @@
-# from json_saver import JsonFile
-# from config import file_path
-# import json
-
-
 class Vacancy:
     """Класс для работы с вакансиями"""
+    vacancies_dict = {}
 
     def __init__(self, vac):
         self.name = vac.get('name')
@@ -46,9 +42,20 @@ class Vacancy:
         result = Vacancy.get_top_vac(total_view, vacancies_sort)
         return result
 
+    @staticmethod
+    def vacancy_to_json(vac: list) -> dict:
+        """Метод преобразует список найденных вакансий к формату json"""
+        dic_vacancies = {}
+        for i, item in enumerate(vac):
+            st = 'Вакансия ' + str(i + 1)
+            dic_vacancies[st] = {
+              "name": item.name,
+              "area": item.area,
+              "salary": str(item.salary),
+              "experience": item.experience,
+              "url": item.url
+            }
+        return dic_vacancies
 
 
 
-# vac = Vacancy("Python Developer", "Москва",  "100 000-150 000 руб.", "от 3 лет", "https://hh.ru/vacancy/123456")
-# print(vac)
-# print(vac)
