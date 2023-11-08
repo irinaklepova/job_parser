@@ -39,15 +39,3 @@ class SuperJobAPI(AbsAPI):
                    'experience': item['experience']['title'], 'url': item['link']}
             vacancies_sj.append(Vacancy(vac))
         return vacancies_sj
-
-    # def get_areas(self) -> list[dict]:
-    #     pass
-
-
-# sj = SuperJobAPI("программист")
-# # for i in sj.get_vacancies():
-# #     print(i)
-# li = sj.get_vacancies()
-# for i in sj.formate_vacancies(li).values():
-#     for j in i:
-#         print(j)
